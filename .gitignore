@@ -44,3 +44,6 @@ build
 build/*
 pbc-frontend
 pbc-frontend/*
+
+# Scripts
+scripts/openapi-codegen/dist

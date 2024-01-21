@@ -6,6 +6,7 @@ export default defineConfig({
   plugins: [sveltekit()],
   resolve: {
     alias: {
+      $api: resolve('./src/lib/api'),
       $assets: resolve('./src/lib/assets'),
       $components: resolve('./src/lib/components'),
       $models: resolve('./src/lib/models'),

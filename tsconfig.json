@@ -12,6 +12,7 @@
     "strictNullChecks": false,
 
     "paths": {
+      "$api": ["./src/lib/api"],
       "$assets/*": ["./src/lib/assets/*"],
       "$components/*": ["./src/lib/components/*"],
       "$models/*": ["./src/lib/models/*"],

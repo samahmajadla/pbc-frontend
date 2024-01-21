@@ -1,0 +1,31 @@
+{
+  "name": "openapi-codegen",
+  "type": "module",
+  "module": "src/app.ts",
+  "main": "build/app.js",
+  "bin": {
+    "bellbooks-openapi-codegen": "build/app.js"
+  },
+  "scripts": {
+    "build": "npm run clean && npx tsc && npx tsc-alias",
+    "clean": "rm -rf build dist src/openapi",
+    "local": "npx bun src/app.ts --local --output=../../src/lib/api",
+    "local:test": "npx bun src/app.ts --local --dry-run",
+    "remote": "npx bun src/app.ts --remote --output=../../src/lib/api",
+    "remote:test": "npx bun src/app.ts --remote --dry-run"
+  },
+  "devDependencies": {
+    "@types/node-fetch": "^2.6.11",
+    "bun": "^1.0.23",
+    "bun-types": "latest",
+    "pkg": "^5.8.1",
+    "pkg-fetch": "^3.5.2",
+    "tsc-alias": "^1.8.8"
+  },
+  "dependencies": {
+    "commander": "^11.1.0",
+    "node-fetch": "^3.3.2",
+    "openapi-typescript": "^6.7.3",
+    "typescript": "^5.3.3"
+  }
+}
